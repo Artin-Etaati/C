@@ -341,6 +341,11 @@ void quitProgram() {
         This makes sure dynamically allocated memory
         is cleaned before the program exits.
     */
+   destroyChildren(PCB[0]->children);
+
+   free(PCB[0]);
+
+   PCB[0] = NULL;
 
 }
 
@@ -390,18 +395,48 @@ int main() {
                    break;
     */
 
-    printf("program complied\n");
+    // printf("program complied\n");
 
-    initializeHierarchy();
+    // initializeHierarchy();
 
-    printHierarchy();
+    // printHierarchy();
 
-    createChild();
+    // createChild();
 
-    createChild();
+    // createChild();
 
-    destroyDescendants();
+    // destroyDescendants();
 
+    int choice;
+
+    do {
+        printf("\nProcess Creation Hierarchy\n");
+        printf("--------------------------\n");
+        printf("1) Initialize process hierarchy\n");
+        printf("2) Create a new child process\n");
+        printf("3) Destroy all descendants of a process\n");
+        printf("4) Quit program and free memory\n");
+
+        printf("\nEnter choice: ");
+        scanf("%d", &choice);
+        
+        switch ( choice ){
+            case 1:
+                initializeHierarchy();
+                break;
+            case 2:
+                createChild();
+                break;
+            case 3:
+                destroyDescendants();
+                break;
+            case 4:
+                quitProgram();
+                break;
+            default:
+                printf("Invalid choice. \n");
+        }
+    } while (choice != 4);
 
 
     return 1;
