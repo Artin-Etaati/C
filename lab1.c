@@ -86,10 +86,8 @@ void printHierarchy() {
 
 
 
-/* ============================================================
-   OPTION 1: INITIALIZE PROCESS HIERARCHY
-   ============================================================ */
 
+// option 1. initialize
 void initializeHierarchy() {
 
     /*
@@ -114,10 +112,8 @@ void initializeHierarchy() {
 
 
 
-/* ============================================================
-   OPTION 2: CREATE A NEW CHILD PROCESS
-   ============================================================ */
 
+// option 2. creating child
 void createChild() {
 
     /*
@@ -209,18 +205,8 @@ void createChild() {
 
 
 
-/* ============================================================
-   RECURSIVE FUNCTION: DESTROY CHILD PROCESSES
-   ============================================================ */
 
-/*
-    TODO:
-    Determine the correct parameter type.
-
-    The parameter should allow this function to move
-    through a linked list of child processes.
-*/
-
+// option 3
 void destroyChildren(childNode *current) {
 
     /*
@@ -268,10 +254,8 @@ void destroyChildren(childNode *current) {
 
 
 
-/* ============================================================
-   OPTION 3: DESTROY ALL DESCENDANTS OF A PROCESS
-   ============================================================ */
 
+// option 3 
 void destroyDescendants() {
 
     /*
@@ -322,10 +306,8 @@ void destroyDescendants() {
 
 
 
-/* ============================================================
-   OPTION 4: QUIT AND FREE MEMORY
-   ============================================================ */
 
+// option 4 and quiting the program and freein up the space
 void quitProgram() {
 
     /*
@@ -351,10 +333,8 @@ void quitProgram() {
 
 
 
-/* ============================================================
-   MAIN
-   ============================================================ */
 
+// main
 int main() {
 
     /*
